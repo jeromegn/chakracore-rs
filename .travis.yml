@@ -4,12 +4,12 @@ rust:
 
 env:
   global:
-    - CHAKRA_SOURCE=/tmp/cc
-    - CHAKRA_BUILD=/tmp/cc/out/Debug
+    - CHAKRA_SOURCE=ChakraCore-1.10.2
+    - CHAKRA_BUILD=ChakraCore-1.10.2/out/Debug
 
 before_install:
   - sudo apt-get update
   - sudo apt-get install -y build-essential cmake clang libunwind8-dev libicu-dev llvm-3.8-dev libclang-3.8-dev pkg-config liblzma-dev
   - curl -L https://github.com/Microsoft/ChakraCore/archive/v1.10.2.tar.gz | tar xz
   - ls -lah
-  # - /tmp/cc/build.sh --debug --ccache --libs-only -j=4
+  - ChakraCore-1.10.2/build.sh --debug --ccache --libs-only -j=4
