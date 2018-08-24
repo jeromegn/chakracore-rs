@@ -12,4 +12,4 @@ before_install:
   - sudo apt-get install -y build-essential cmake clang-3.8 libunwind8-dev libicu-dev llvm-3.9-dev libclang-3.9-dev pkg-config liblzma-dev
   - curl -L https://github.com/Microsoft/ChakraCore/archive/v1.10.2.tar.gz | tar xz
   - ls -lah
-  - ChakraCore-1.10.2/build.sh --debug --ccache --libs-only -j=4
+  - ChakraCore-1.10.2/build.sh --debug --ccache --libs-only -j=4 --cxx=/usr/bin/clang++-3.9 --cc=/usr/bin/clang-3.9
